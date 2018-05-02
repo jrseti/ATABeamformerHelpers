@@ -6,7 +6,7 @@ These scripts start up the beamformer and calibrate. Once this script is finishe
 
 The main script is bf_setup.rb. It does it all.
 
-  ./bf_setup.rb <delay cal target> <phase target name> <BF1 freq MHz> <BF2/3 freq MHz> <beam1 target name> <beam2 target name> <beam3 target name> <logfile name tag>
+  ./bf_setup.rb &lt;delay cal target&gt; &lt;phase target name&gt; &lt;BF1 freq MHz&gt; &lt;BF2/3 freq MHz&gt; &lt;beam1 target name&gt; &lt;beam2 target name&gt; &lt;beam3 target name&gt; &lt;logfile name tag&gt;
 
  Example:
   ./bf_setup.rb casa 3c48 1680.0 1680.0 moon moon moon testlog1
@@ -17,7 +17,7 @@ You need to modify userinfo.rb to specify:
  * ant pols to use
  * beam data output address and port
 
-Trick - for the <phase target name> you can specify "best" (without quotes) and the script will pick out the best calibtaor to use.
+Trick - for the &lt;phase target name&gt; you can specify "best" (without quotes) and the script will pick out the best calibtaor to use.
 
 ## Other scripts
 
@@ -25,11 +25,11 @@ Trick - for the <phase target name> you can specify "best" (without quotes) and 
 
 This is a script that tells you the best phase calibrator to use for a given frquency.
 
-  syntax: ./best_cal.rb: <freq in MHz>
+  syntax: ./best_cal.rb: &lt;freq in MHz&gt;
 
   Example:
 
-    > best_cal.rb 3000
+    &gt; best_cal.rb 3000
       search for best cal @ 3000.0MHz among the following:
       	3c123
       	3c380
@@ -48,11 +48,11 @@ This is a script that tells you the best phase calibrator to use for a given frq
 
 This is a script with methods used by bf_setup.rb. Gets the flux and set or rise time.
 
-  syntax: #{$PROGRAM_NAME} <calibrator name> <freq in MHz>
+  syntax: #{$PROGRAM_NAME} &lt;calibrator name&gt; &lt;freq in MHz&gt;
 
   Example: 
 
-    > ./calinfo.rb 3c84 3000
+    &gt; ./calinfo.rb 3c84 3000
       3c84, flux 23.534 at 3000 MHz, UP - sets 20:48:45
 
   Contains several methods used by bf_setup.rb
@@ -65,7 +65,7 @@ This is a script with methods used by bf_setup.rb. Gets the flux and set or rise
 
   Reads an ATA ephemeris file and shifts the azimuth and elecation positions by a contant.
 
-  syntax: shift_ephem <input file> <output file> <shift az deg> <shift el deg>
+  syntax: shift_ephem &lt;input file&gt; &lt;output file&gt; &lt;shift az deg&gt; &lt;shift el deg&gt;
 
 
 
