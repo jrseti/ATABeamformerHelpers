@@ -6,7 +6,7 @@ These scripts start up the beamformer and calibrate. Once this script is finishe
 
 The main script is bf_setup.rb. It does it all.
 
-./bf_setup.rb <delay cal target> <phase target name> <BF1 freq MHz> <BF2/3 freq MHz> <beam1 target name> <beam2 target name> <beam3 target name> <logfile name tag>
+  ./bf_setup.rb <delay cal target> <phase target name> <BF1 freq MHz> <BF2/3 freq MHz> <beam1 target name> <beam2 target name> <beam3 target name> <logfile name tag>
 
  Example:
   ./bf_setup.rb casa 3c48 1680.0 1680.0 moon moon moon testlog1
